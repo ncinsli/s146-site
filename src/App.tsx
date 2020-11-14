@@ -1,12 +1,15 @@
 import React from "react";
 import DButton from "./components/button/button";
 import "./App.scss";
+import logo from "./components/img/logo.png";
 
 class App extends React.Component{
     render(){
         return(
             <React.Fragment>
+                <div className = "topPanel"><p className = "hidden">f</p></div>
                 <div className = "mainButtonsContainer">
+                    <img id = "logo" src = {logo}></img>
                     <DButton isBold = {true} text = "главная"/>
                     <DButton isBold = {true} text = "о школе"/>
                     <DButton isBold = {true} text = "контакты"/>

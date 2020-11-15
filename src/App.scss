@@ -1,12 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-    border-size: border-box;
 } 
 
 .mainPanel{
     display: flex;
-
+    z-index: 5;
 }
 
 .mainButtonsContainer{
@@ -17,12 +16,13 @@
 }
 
 #logo{
+    display: flex;
     z-index: 10;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: -0.2%;
-    display: flex;
     align-self: stretch;
     height: 40%;
     object-fit:cover;
+    background-color: transparent;
 }

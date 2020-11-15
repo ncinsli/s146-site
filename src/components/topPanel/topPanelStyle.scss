@@ -1,0 +1,21 @@
+.topPanel{
+    display: flex;
+    background-color: #193972;
+    z-index: -2;
+    width: 100vw;
+    height: 9.5vh;
+    margin-top: 0%;
+    .hidden { visibility: hidden; }
+}
+
+.randomDecorations{
+    z-index: 1;
+    transform: scale(0.9);
+    opacity: 20%;
+    padding-top: 0%;
+    margin-top: -10%;
+    object-fit:cover;
+    perspective: 0%;
+    margin-right: 50px;
+    object-fit:cover;
+}

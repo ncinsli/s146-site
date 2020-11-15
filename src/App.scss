@@ -4,25 +4,25 @@
     border-size: border-box;
 } 
 
-.topPanel{
-    z-index: 16; //Чтобы не было артефактов
-    background-color: #193972;
-    width: 100vw;
-    height: 9.5vh;
-    margin-top: 0%;
-    .hidden { visibility: hidden; }
+.mainPanel{
+    display: flex;
+
 }
+
 .mainButtonsContainer{
     margin-top: 1%;
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
 
 #logo{
-    margin-left: 0%;
-    margin-right: 5%;
-    align-self: center;
+    z-index: 10;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -0.2%;
     display: flex;
-    width: 4%;
-    height: 2%;
+    align-self: stretch;
+    height: 40%;
+    object-fit:cover;
 }

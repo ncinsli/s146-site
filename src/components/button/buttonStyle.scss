@@ -20,8 +20,8 @@
     background-color: #F4F4F4;
   &:after {
     content: "";
-    z-index: 1;
     position: absolute;
+    z-index: 0;
     width: 0;
     height: 0;
     top: 50%;
@@ -33,10 +33,12 @@
     transition: width .5s ease, height .5s ease;
   }
   &:focus{
+    z-index: 0;
     color: black;
     background-color: #F4F4F4;
   }
   &:hover {
+      z-index: 0;
       transition: transform  .2s ease-out;
       transition: transform background .2s ease-out;
       background-color: #F4F4F4;
@@ -44,6 +46,7 @@
   }
   &:focus {
     &:after {
+      z-index: 0;
       width: 150px;
       height: 100px;
     }

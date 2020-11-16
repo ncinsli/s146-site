@@ -22,8 +22,8 @@
     background-color: #FCFBFB;
   &:after {
     content: "";
-    z-index: 10;
     position: absolute;
+    z-index: 0;
     width: 0;
     height: 0;
     top: 50%;
@@ -35,6 +35,7 @@
     transition: width .5s ease, height .5s ease;
   }
   &:focus{
+    z-index: 0;
     color: black;
     background-color: #F4F4F4;
   }
@@ -46,6 +47,7 @@
   }
   &:focus {
     &:after {
+      z-index: 0;
       width: 250px;
       height: 200px;
     }

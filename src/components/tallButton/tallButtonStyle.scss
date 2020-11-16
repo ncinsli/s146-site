@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.designedButton{
+.designedTallButton{
     display: flex; 
     border-color: rgba(0, 0, 0, 0);
-    border-width: 1px;
+    border-width: 10px;
     outline: none;
     height: max-content;
     border-radius: 11px;
     .buttonText{
       font-family: 'Balsamiq Sans', cursive;
+      text-align: center;
     }
     text-align: justify;
     align-items: center;
     justify-content: center;
-    width: 17ch;
-    height: 6ch;
+    width: 23.5ch;
+    height: 13.5ch;
     margin: 0.5%;
+    margin-right: 2ch;
     transition: background-color 0.5s ease;
-    background-color: #F4F4F4;
+    background-color: #FCFBFB;
   &:after {
     content: "";
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     width: 0;
     height: 0;
@@ -44,30 +46,46 @@
   }
   &:focus {
     &:after {
-      width: 150px;
-      height: 100px;
+      width: 250px;
+      height: 200px;
     }
   }
 
 }
 
-.designedButton:hover{
+@keyframes rotateALittle{
+  from{ transform: rotate(0deg); }
+  25%{ 
+    transform: rotate(10deg); 
+  }
+  50%{ 
+    transform: rotate(0deg); 
+    transform: scale(1.08);
+  }
+  to{ 
+    transform: rotate(-20deg); 
+    transform: scale(1.1);
+  }
+}
+
+.designedTallButton:hover{
     transition: 0.2s transform ease;
     transform: scale(1.05);
 }
 
-
-.designedButton:focus{
+.designedTallButton:focus{
+    animation: rotateALittle 1s;
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 1);
     transition: 0.7s background-color ease;
     background-color: #153061;
     transition: 0.7s all ease;
-    transform: scale(0.98);
+    transform: scale(1.1);
     color: white;
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
 }
 
-.designedButton:active{
+.designedTallButton:active{
     transition: 0.4s transform ease;
-    transform: scale(0.96);
+    transform: scale(1.06);
 }
 

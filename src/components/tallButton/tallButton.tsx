@@ -1,16 +1,16 @@
 import React from "react";
-import "./buttonStyle.scss";
+import "./tallButtonStyle.scss";
 type Props = {
     text : string, 
     isBold : boolean,
     fontSize : number
 }
 
-class DButton extends React.Component<Props>{
+class TallButton extends React.Component<Props>{
     render(){
         return(
             <React.Fragment>
-                <button className = "designedButton">
+                <button className = "designedTallButton">
                     <p className = "buttonText" style = {{ 
                         fontWeight: this.props.isBold ? 700 : 200,
                         fontSize: `${this.props.fontSize}em`
@@ -21,4 +21,4 @@ class DButton extends React.Component<Props>{
     }
 }
 
-export default DButton;
+export default TallButton;

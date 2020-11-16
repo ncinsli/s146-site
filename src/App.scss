@@ -1,28 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     padding: 0;
     margin: 0;
 } 
 
-.mainPanel{
+body{
     display: flex;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.mainPanel{
     z-index: 5;
 }
 
 .mainButtonsContainer{
-    margin-top: 1%;
     display: flex;
+    margin-top: 2%;
     justify-content: center;
-    z-index: 10;
+    z-index: 10;    
+}
+
+.titleButton{
+    margin-top: 1.7ch;
+    margin-right: 3ch;
 }
 
 #logo{
     display: flex;
     z-index: 10;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: -0.2%;
-    align-self: stretch;
-    height: 40%;
+    margin-left: -50ch;
+    margin-right: 9ch;
+    margin-top: -3.2ch;
+    height: 38%;
+    transform: scale(0.4);
     object-fit:cover;
     background-color: transparent;
 }
+
+.cardList{
+    display: flex; //Для горизонатльного отображения элементов 
+    margin-left: 12ch;
+    margin-top: 2.5ch;
+}
+
+.horizontalElements{ display: flex; }

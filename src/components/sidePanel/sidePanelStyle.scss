@@ -1,0 +1,12 @@
+.sidePanel{
+    margin-left: 7ch;
+    width: fit-content;
+}
+
+.row{
+    display: flex;
+    &{
+        height: 10ch;
+    }
+    padding-bottom: 3ch;
+}

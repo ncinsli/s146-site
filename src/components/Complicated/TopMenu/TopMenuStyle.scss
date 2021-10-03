@@ -1,15 +1,21 @@
 .TopMenu{
     display: block;
     width: 75vw;
-    height: auto;
+    height: 6.5vh;
+    margin: 23px auto;
     .Logo146{
+        display: block;
         margin-right: 23px;
         float: left;
     }
-
-    .TopMenuButton{
-        float: left;
-        margin: 0 auto;
+    .TopMenuButtonsDiv{
         display: block;
+        float: left;
+        width: auto;
+        height: inherit;
+    }
+    .TopMenuButton{
+        display: inline-block;
+        margin: 0 1.3vw 0 0;
     }
 }

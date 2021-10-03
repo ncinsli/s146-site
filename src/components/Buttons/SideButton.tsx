@@ -8,9 +8,7 @@ type Props = {
 const SideButton : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
-            <button className = {`designedSideButton ${props.className}`}>
-                <p className = "buttonText">{props.text}</p>
-            </button>
+            <button className = {`designedSideButton ${props.className}`}>{props.text}</button>
         </React.Fragment>
     );
     

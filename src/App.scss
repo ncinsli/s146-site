@@ -2,51 +2,8 @@
 *{
     padding: 0;
     margin: 0;
-} 
+}
 
 body{
-    display: flex;
     font-family: 'Balsamiq Sans', cursive;
-}
-
-.mainPanel{
-    z-index: 5;
-}
-
-.mainButtonsContainer{
-    display: flex;
-    margin-top: 4ch;
-    margin-bottom: 0%;
-    justify-content: center;
-    z-index: 10;    
-}
-
-.titleButton{
-    margin-top: 1.7ch;
-    margin-right: 3ch;
-}
-
-#logo{
-    display: flex;
-    z-index: 10;
-    margin-left: -40ch;
-    margin-right: 5ch;
-    margin-top: -3.5ch;
-    height: 38%;
-    transform: scale(0.5);
-    object-fit:cover;
-    background-color: transparent;
-}
-
-.cardList{
-    display: flex; //Для горизонатльного отображения элементов 
-    margin-left: 12ch;
-    margin-top: 2.5ch;
-}
-
-.horizontalElements{ display: flex; }
-
-.TopMenubar{
-    margin-left: 10vw;
-
 }

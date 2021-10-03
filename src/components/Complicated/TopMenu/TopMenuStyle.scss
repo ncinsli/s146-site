@@ -1,9 +1,7 @@
 .TopMenu{
     display: block;
-    padding: 23px;
     width: 75vw;
-    margin: 2.5vh 7vw;
-
+    height: auto;
     .Logo146{
         margin-right: 23px;
         float: left;
@@ -12,5 +10,6 @@
     .TopMenuButton{
         float: left;
         margin: 0 auto;
+        display: block;
     }
 }

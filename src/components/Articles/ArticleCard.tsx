@@ -24,7 +24,7 @@ const ArticleCard : React.FC<Props> = (props : Props) => {
                 </div>
                 
                 <div className = "ArticlePicture">
-                    <img src="https://s146.ru/gallery//Photos/2019.09.05$$%D0%A2%D1%83%D1%80%D1%81%D0%BB%D1%91%D1%82//DSC_0987.jpg" alt="Картинобчка"/>
+                    <img src={props.photo} alt="Картинобчка"/>
                 </div>
             </div>
         </React.Fragment>

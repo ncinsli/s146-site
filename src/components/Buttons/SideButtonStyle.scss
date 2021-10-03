@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.designedSideButton{
+    display: flex; 
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 1px;
+    outline: none;
+    height: max-content;
+    border-radius: 39px;
+    .buttonText{
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    width: 25ch;
+    height: 16ch;
+    margin: 0.5%;
+    transition: background-color 0.5s ease;
+    background-color: #F4F4F4;
+ 
+  &:focus{
+    z-index: 0;
+    color: black;
+    background-color: #F4F4F4;
+  }
+  &:hover {
+      z-index: 0;
+      transition: transform  .2s ease-out;
+      transition: transform background .2s ease-out;
+      background-color: #F4F4F4;
+      color: black;
+  }
+
+}
+
+.designedSideButton:hover{
+    transition: 0.2s transform ease;
+    transform: scale(1.05);
+}
+
+
+.designedSideButton:focus{
+    transition: 0.7s background-color ease;
+    background-color: #153061;
+    transition: 0.7s all ease;
+    transform: scale(0.98);
+    color: white;
+    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
+}
+
+.designedSideButton:active{
+    transition: 0.4s transform ease;
+    transform: scale(0.96);
+}
+

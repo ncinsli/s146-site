@@ -1,0 +1,60 @@
+.ArticleCard{
+    --ArticleCardHeight: 17vh;
+
+    background-color: #F7F7F7;
+    border-radius: 77px;
+    width: 66vw;
+    height: var(--ArticleCardHeight);
+
+    .ArticleText{
+        float: left;
+        display: block;
+        width: calc(100% - var(--ArticleCardHeight) - 5.4vh);
+        height: calc(100% - 7vh);
+        padding: 3.5vh 0 3.5vh 5.4vh;
+
+        .ArticleTitle{
+            height: 40%;
+            width: 100%;
+            font-size: 36;
+            overflow: hidden;
+            display: block;
+            text-overflow: ellipsis;
+        }
+
+        .ArticleSubtitleAndDot{
+            height: 60%;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .ArticleSubtitle{
+            word-wrap: break-word;
+            overflow: hidden;
+            font-size: 18;
+            height: 100%;
+            width: 100%;
+            display: block;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .ArticlePicture{
+        height: 100%;
+        width: var(--ArticleCardHeight);
+        display: block;
+        float: left;
+        overflow: hidden;
+        border-radius: 0px 77px 77px 0px;
+        
+        img{
+            width: auto;
+            margin: 0 auto;
+            height: 100%;
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
+        }
+    }
+}

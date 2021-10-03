@@ -15,7 +15,8 @@ body{
 
 .mainButtonsContainer{
     display: flex;
-    margin-top: 2%;
+    margin-top: 4ch;
+    margin-bottom: 0%;
     justify-content: center;
     z-index: 10;    
 }
@@ -28,11 +29,11 @@ body{
 #logo{
     display: flex;
     z-index: 10;
-    margin-left: -50ch;
-    margin-right: 9ch;
-    margin-top: -3.2ch;
+    margin-left: -40ch;
+    margin-right: 5ch;
+    margin-top: -3.5ch;
     height: 38%;
-    transform: scale(0.4);
+    transform: scale(0.5);
     object-fit:cover;
     background-color: transparent;
 }

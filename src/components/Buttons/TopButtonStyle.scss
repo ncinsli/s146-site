@@ -1,37 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.designedButton{
+.designedTopButton{
     display: flex; 
     border-color: rgba(0, 0, 0, 0);
     border-width: 1px;
     outline: none;
     height: max-content;
-    border-radius: 11px;
+    border-radius: 39px;
     .buttonText{
       font-family: 'Balsamiq Sans', cursive;
     }
     text-align: justify;
     align-items: center;
     justify-content: center;
-    width: 17ch;
-    height: 6ch;
+    width: 16ch;
+    height: 5ch;
     margin: 0.5%;
     transition: background-color 0.5s ease;
     background-color: #F4F4F4;
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    transform-style: flat;
-    transform: translate3d(-50%,-50%,0);
-    background: rgba(#F4F4F4, .1);
-    border-radius: 100%;
-    transition: width .5s ease, height .5s ease;
-  }
+
   &:focus{
     z-index: 0;
     color: black;
@@ -45,22 +32,18 @@
       color: black;
   }
   &:focus {
-    &:after {
-      z-index: 0;
-      width: 150px;
-      height: 100px;
-    }
+
   }
 
 }
 
-.designedButton:hover{
+.designedTopButton:hover{
     transition: 0.2s transform ease;
     transform: scale(1.05);
 }
 
 
-.designedButton:focus{
+.designedTopButton:focus{
     transition: 0.7s background-color ease;
     background-color: #153061;
     transition: 0.7s all ease;
@@ -69,7 +52,7 @@
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
 }
 
-.designedButton:active{
+.designedTopButton:active{
     transition: 0.4s transform ease;
     transform: scale(0.96);
 }

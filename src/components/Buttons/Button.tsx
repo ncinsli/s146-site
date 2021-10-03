@@ -9,9 +9,7 @@ type Props = {
 const Button : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
-            <button className = "designedButton">
-                <p className = "buttonText">{props.text}</p>
-            </button>
+            <button className = {`designedButton ${props.className}`}> {props.text} </button>
         </React.Fragment>
     );
     

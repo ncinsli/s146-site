@@ -8,7 +8,7 @@ type Props = {
 const TopButton : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
-            <button className = "designedTopButton">
+            <button className = {`designedTopButton ${props.className}`}>
                 <p className = "buttonText">{props.text}</p>
             </button>
         </React.Fragment>

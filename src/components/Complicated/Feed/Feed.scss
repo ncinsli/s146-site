@@ -1,6 +1,12 @@
-.PostsLentaDiv{
+.FeedDiv{
     height: 70vh;
     width: 50vw;
+
+    margin: 4vh 0;
     display: block;
     float: left;
+
+    .Card{
+        margin-bottom: 2vh;
+    }
 }

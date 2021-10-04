@@ -3,17 +3,17 @@
 .designedSideButton{
   display: block; 
   border-color: rgba(0, 0, 0, 0);
-  outline: none;
+  outline: none;  
+  font-size: 2vh;
   border-radius: 39px;
   font-family: 'Balsamiq Sans', cursive;
   font-weight: bold;
-  width: 11.5vw;
-  height: 12vh;
-  transition: background-color 0.5s ease;
-  background-color: #F4F4F4;
-  font-size: 20px;
+  width: 10.5vw;
+  height: 13.6vh;
+  // transition: background-color 0.5s ease;
+  background-color: #FCFBFB;
   &:hover {
-    background-color: #F4F4F4;
+    background-color: #FCFBFB;
     color: black;
     transition: 0.2s transform ease;
     transform: scale(1.05);

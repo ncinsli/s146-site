@@ -13,7 +13,7 @@ const OrangeDot : React.FC = () => <svg width="13" height="13" viewBox="0 0 13 1
 const ArticleCard : React.FC<Props> = (props : Props) => {
     return (
         <React.Fragment>
-            <div className = "ArticleCard">
+            <div className = {`ArticleCard ${props.className}`}>
                 <div className = "ArticleText">
                     <h2 className = "ArticleTitle">{props.title}</h2>
                     <div className = "ArticleSubtitleAndDot">

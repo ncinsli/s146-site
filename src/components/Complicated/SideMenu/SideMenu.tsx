@@ -1,15 +1,15 @@
 import React from 'react';
-import './LeftMenuStyle.scss';
+import './SideMenuStyle.scss';
 import SideButton from '../../Buttons/SideButton';
 
 type Props = {
     className : string
 };
 
-const LeftMenu : React.FC<Props> = (props : Props) => {
+const SideMenu : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
-            <div className="LeftMenu">
+            <div className={`LeftMenu ${props.className}`}>
                 <SideButton className="LeftMenuButton" text="Расписание кружков"></SideButton>
                 <SideButton className="LeftMenuButton" text="Дайте, пожалуйста, задачу"></SideButton>
                 <SideButton className="LeftMenuButton" text="Олимпиады"></SideButton>
@@ -23,4 +23,4 @@ const LeftMenu : React.FC<Props> = (props : Props) => {
     );
 };
 
-export default LeftMenu;
+export default SideMenu;

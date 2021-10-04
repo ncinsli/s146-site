@@ -2,29 +2,29 @@ import React from "react";
 import {useEffect, useState} from "react";
 import UpperDecoration from "../components/UpperDecoration/UpperDecoration";
 import TopMenu from "../components/Complicated/TopMenu/TopMenu";
-import LeftMenu from "../components/Complicated/LeftMenu/LeftMenu";
+import SideMenu from "../components/Complicated/SideMenu/SideMenu";
 import Feed from "../components/Complicated/Feed/Feed";
 import axios from 'axios';
+import './Home.scss';
 import ErrorPage from './ErrorPage';
 
 const Home : React.FC = () => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<Article[]>([]);
   
     useEffect(() => {
-      axios.get('https://api-ncinsli.dev.dc7342.im/posts/get/0').then((response) => {
+      axios.get('https://api-ncinsli.dev.dc7342.im/posts/get/0').then((response : ArticleList) => {
         setPosts(response.data);
       });
     }, []);
   
     if (!posts) return null;
-    console.log(posts);
-
+    
     return (
         <React.Fragment>
             <UpperDecoration/>
             <TopMenu className="TopMenu"/>
-            <LeftMenu className="LeftMenu"/>
-            <Feed className="PostsLenta" items={posts}/>
+            <SideMenu className="SideMenu"/>
+            <Feed className="Feed" items={posts}/>
         </React.Fragment>
     );
 }

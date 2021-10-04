@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostsLentaStyle.scss';
+import './Feed.scss';
 import ArticleCard from '../../Articles/ArticleCard';
 
 type Item = {

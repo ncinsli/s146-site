@@ -3,6 +3,13 @@
     height: auto;
     display: block;
     width: 66.7vw;
+    h1{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 55px;
+    }
     .FeedDiv{
         height: auto;
         width: inherit;
@@ -10,7 +17,7 @@
         display: block;
         .Card{
             display: block;
-            margin-bottom: 2vh;
+            margin-bottom: 2.31vh;
         }
     }
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 .ArticleCard{
     --ArticleCardHeight: 17.03vh;
 
@@ -12,6 +14,7 @@
         width: calc(100% - var(--ArticleCardHeight) - 5.4vh);
         height: calc(100% - 7vh);
         padding: 3.5vh 0 3.5vh 5.4vh;
+        font-family: 'Ubuntu', sans-serif;
 
         .ArticleTitle{
             height: 40%;

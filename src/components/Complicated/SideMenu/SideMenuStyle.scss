@@ -1,11 +1,15 @@
-.LeftMenu{
+.SideMenu{
     display: block;
-    width: 25vw;
+    width: 22vw;
     height: auto;
     min-height: 68vh;
     margin-top: 5vh;
     float: left;
-    .LeftMenuButton{
+    .SideMenuButton{
+        float: left;
+        margin: 0 0 2vh 0;
+    }
+    .SideMenuButton:nth-child(2n+1){
         float: left;
         margin: 0 1vw 2vh 0;
     }

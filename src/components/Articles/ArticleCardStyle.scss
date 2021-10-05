@@ -2,8 +2,8 @@
     --ArticleCardHeight: 17vh;
 
     background-color: #F7F7F7;
-    border-radius: 77px;
-    width: 66vw;
+    border-radius: 81px;
+    width: inherit;
     height: var(--ArticleCardHeight);
 
     .ArticleText{
@@ -24,7 +24,7 @@
 
         .ArticleSubtitleAndDot{
             height: 60%;
-            width: 100%;
+            width: inherit;
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -34,8 +34,8 @@
             word-wrap: break-word;
             overflow: hidden;
             font-size: 18;
-            height: 100%;
-            width: 100%;
+            height: inherit;
+            width: inherit;
             display: block;
             text-overflow: ellipsis;
         }
@@ -47,12 +47,12 @@
         display: block;
         float: left;
         overflow: hidden;
-        border-radius: 0px 77px 77px 0px;
+        border-radius: 0px 81px 81px 0px;
         
         img{
-            width: auto;
-            margin: 0 auto;
-            height: 100%;
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
             display: block;
             image-rendering: -webkit-optimize-contrast;
         }

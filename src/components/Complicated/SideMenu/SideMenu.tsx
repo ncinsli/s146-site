@@ -9,15 +9,15 @@ type Props = {
 const SideMenu : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
-            <div className={`LeftMenu ${props.className}`}>
-                <SideButton className="LeftMenuButton" text="Расписание кружков"></SideButton>
-                <SideButton className="LeftMenuButton" text="Дайте, пожалуйста, задачу"></SideButton>
-                <SideButton className="LeftMenuButton" text="Олимпиады"></SideButton>
-                <SideButton className="LeftMenuButton" text="Клуб друзей"></SideButton>
-                <SideButton className="LeftMenuButton" text="Официальный сайт"></SideButton>
-                <SideButton className="LeftMenuButton" text="Газета ШОР"></SideButton>
-                <SideButton className="LeftMenuButton" text="План школы"></SideButton>
-                <SideButton className="LeftMenuButton" text="О сайте"></SideButton>
+            <div className={`SideMenu ${props.className}`}>
+                <SideButton className="SideMenuButton" text="Расписание кружков"></SideButton>
+                <SideButton className="SideMenuButton" text="Дайте, пожалуйста, задачу"></SideButton>
+                <SideButton className="SideMenuButton" text="Олимпиады"></SideButton>
+                <SideButton className="SideMenuButton" text="Клуб друзей"></SideButton>
+                <SideButton className="SideMenuButton" text="Официальный сайт"></SideButton>
+                <SideButton className="SideMenuButton" text="Газета ШОР"></SideButton>
+                <SideButton className="SideMenuButton" text="План школы"></SideButton>
+                <SideButton className="SideMenuButton" text="О сайте"></SideButton>
             </div>
         </React.Fragment>
     );

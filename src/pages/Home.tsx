@@ -7,17 +7,18 @@ import Feed from "../components/Complicated/Feed/Feed";
 import axios from 'axios';
 import './Home.scss';
 import ErrorPage from './ErrorPage';
+import { Scrapper } from "../services/ArticlesScrapper";
 
 const Home : React.FC = () => {
-    const [posts, setPosts] = useState<Article[]>([]);
+    const [posts, setPosts] = useState<ArticlePreview[]>([]);
   
     useEffect(() => {
-      axios.get('https://api-ncinsli.dev.dc7342.im/posts/get/0').then((response : ArticleList) => {
-        setPosts(response.data);
+      Scrapper.ScrapPreviews().then((res) => {
+        if (res?.data === undefined) return;
+        setPosts(res.data)
       });
     }, []);
-  
-    if (!posts) return null;
+
     
     return (
         <React.Fragment>

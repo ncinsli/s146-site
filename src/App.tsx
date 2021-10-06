@@ -7,13 +7,19 @@ import {
     Link
 } from "react-router-dom";
 import Home from './pages/Home';
+import ErrorPage from "./pages/ErrorPage";
+import About from "./pages/About";
 
 const App : React.FC = () => {
     return(
         <Router>
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <Home />
+                </Route>
+
+                <Route exact path="/about">
+                    <About />
                 </Route>
             </Switch>
         </Router>

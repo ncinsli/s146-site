@@ -3,13 +3,14 @@ import "./ButtonStyle.scss";
 
 type Props = {
     text : string, 
-    className? : string
+    className? : string,
+    onClick? : () => void
 }
 
 const Button : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
-            <button className = {`designedButton ${props.className}`}> {props.text} </button>
+            <button onClick = { () => props.onClick === undefined ? null : props.onClick() } className = {`designedButton ${props.className}`}> {props.text} </button>
         </React.Fragment>
     );
     

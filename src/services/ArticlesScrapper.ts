@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export type ArticleResponse = {
-    data : Article
+    data : ArticleFull[]
 };
 
 export class Scrapper{

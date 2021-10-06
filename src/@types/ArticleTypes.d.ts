@@ -9,7 +9,7 @@ declare type ArticlePreview = {
     sidePicture? : string
 };
 
-declare type Article = {
+declare type ArticleFull = {
     id : number,
     title : string,
     date : string,

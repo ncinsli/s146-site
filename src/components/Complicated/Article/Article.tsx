@@ -2,7 +2,7 @@ import React from 'react';
 import './Article.scss';
 
 type Props = {
-    displayed : Article | undefined,
+    displayed : ArticleFull | undefined,
     className? : string
 };
 
@@ -13,10 +13,14 @@ const Article : React.FC<Props> = (props : Props) => {
             {
                 !props.displayed
                 ?
+                <div className={`Article ${props.className}`}>
                     <h1>Статья не существует</h1>
+                </div>
                 :
                 <div className={`Article ${props.className}`}>
-                    <h1>{props.displayed?.title}</h1>
+                    <h1>{props.displayed.title}</h1>
+                    <h3>{props.displayed.date}</h3>
+                    <p>{props.displayed.body}</p>
 
                 </div>
             }

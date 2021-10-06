@@ -1,36 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, withRouter } from 'react-router';
 import Feed from '../components/Complicated/Feed/Feed';
 import SideMenu from '../components/Complicated/SideMenu/SideMenu';
 import TopMenu from '../components/Complicated/TopMenu/TopMenu';
 import UpperDecoration from '../components/UpperDecoration/UpperDecoration';
 import axios from 'axios';
-import './About.scss';
 import { ArticleResponse, Scrapper } from '../services/ArticlesScrapper';
 import Article from '../components/Complicated/Article/Article';
-import { withRouter } from 'react-router-dom';
+import Button from '../components/Buttons/Button';
+import './ArticleView.scss';
 
-const About : React.FC = () => {
-    const [post, setPost] = useState<ArticleFull | undefined>();
-
-    useEffect(() => {
-        Scrapper.ScrapPost(-1).then((res : ArticleResponse) => {
-            if (!res) return;
-            console.log(res); // @ts-ignore
-            setPost(res.data[0]);
-        });
-    }, []);
-  
-    // if (!posts) return null;
+const ArticleView : React.FC = () => {
+    const history = useHistory();
 
     return (
         <React.Fragment>
             <UpperDecoration/>
             <TopMenu className="TopMenu"/>
             <SideMenu className="SideMenu"/>
-            <Article displayed={post} className="Article" />
+            <div className="ArticleAndOperations">
+                <Article className="Article" displayed={history.location.state as ArticleFull}></Article>
+                <Button text="Назад" className="Back" onClick={() => history.push('/')}></Button>
+            </div>
         </React.Fragment>
     );
-};
+}
 
-export default withRouter(About);
+export default withRouter(ArticleView);

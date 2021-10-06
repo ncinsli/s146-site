@@ -9,6 +9,8 @@ import {
 import Home from './pages/Home';
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
+import Article from "./components/Complicated/Article/Article";
+import ArticleView from "./pages/ArticleView";
 
 const App : React.FC = () => {
     return(
@@ -20,6 +22,10 @@ const App : React.FC = () => {
 
                 <Route exact path="/about">
                     <About />
+                </Route>
+
+                <Route exact path="/article">
+                    <ArticleView />
                 </Route>
             </Switch>
         </Router>

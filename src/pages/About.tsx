@@ -26,7 +26,7 @@ const About : React.FC = () => {
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <TopMenu className="TopMenu"/>
+            <TopMenu selectedIndex={1} className="TopMenu"/>
             <SideMenu className="SideMenu"/>
             <Article displayed={post} className="Article" />
         </React.Fragment>

@@ -23,7 +23,7 @@ const Home : React.FC = () => {
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <TopMenu className="TopMenu"/>
+            <TopMenu selectedIndex={0} className="TopMenu"/>
             <SideMenu className="SideMenu"/>
             <Feed className="Feed" items={posts}/>
         </React.Fragment>

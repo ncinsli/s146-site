@@ -16,7 +16,7 @@ const ArticleView : React.FC = () => {
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <TopMenu className="TopMenu"/>
+            <TopMenu selectedIndex={0} className="TopMenu"/>
             <SideMenu className="SideMenu"/>
             <div className="ArticleAndOperations">
                 <Article className="Article" displayed={history.location.state as ArticleFull}></Article>

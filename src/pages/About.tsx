@@ -9,14 +9,11 @@ import './About.scss';
 import { ArticleResponse, Scrapper } from '../services/ArticlesScrapper';
 import Article from '../components/Complicated/Article/Article';
 import { withRouter } from 'react-router-dom';
-import { GlobalState } from '../services/GlobalState';
 
 const About : React.FC = () => {
     const [post, setPost] = useState<ArticleFull | undefined>();
 
     useEffect(() => {
-        GlobalState.setSelectionId(0);
-
         Scrapper.ScrapPost(-1).then((res : ArticleResponse) => {
             if (!res) return;
             console.log(res); // @ts-ignore

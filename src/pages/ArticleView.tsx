@@ -9,16 +9,15 @@ import { ArticleResponse, Scrapper } from '../services/ArticlesScrapper';
 import Article from '../components/Complicated/Article/Article';
 import Button from '../components/Buttons/Button';
 import './ArticleView.scss';
-import BaseMenu from '../components/Complicated/BaseMenu/BaseMenu';
-import { GlobalState } from '../services/GlobalState';
 
-const ArticleView : React.FC = (props) => {
+const ArticleView : React.FC = () => {
     const history = useHistory();
 
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <BaseMenu/>
+            <TopMenu selectedIndex={0} className="TopMenu"/>
+            <SideMenu className="SideMenu"/>
             <div className="ArticleAndOperations">
                 <Article className="Article" displayed={history.location.state as ArticleFull}></Article>
                 <Button text="Назад" className="Back" onClick={() => history.push('/')}></Button>

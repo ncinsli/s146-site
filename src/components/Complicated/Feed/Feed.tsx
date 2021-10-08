@@ -2,8 +2,6 @@ import React from 'react';
 import './Feed.scss';
 import ArticleCard from '../../Articles/ArticleCard';
 import { useHistory } from 'react-router';
-import Article from '../Article/Article';
-import ReactDOM from 'react-dom';
 
 type Props = {
     items : Array<ArticleFull>;
@@ -16,7 +14,7 @@ const Feed : React.FC<Props> = (props : Props) => {
 
     props.items.forEach(item => {
         const row = (
-            <ArticleCard onClick={ () => { history.push(`/article`, item) } } 
+            <ArticleCard onClick={ () => { history.push(`/article/${item.id}`, item) } } 
                 className="Card" title={item.title} subTitle={item.body} photo="http://www.rosphoto.com/images/u/articles/1510/4_8.jpg"/>
         );
         itemRows.push(row);

@@ -4,7 +4,6 @@ import UpperDecoration from "../components/UpperDecoration/UpperDecoration";
 import TopMenu from "../components/Complicated/TopMenu/TopMenu";
 import SideMenu from "../components/Complicated/SideMenu/SideMenu";
 import Feed from "../components/Complicated/Feed/Feed";
-import axios from 'axios';
 import './Home.scss';
 import ErrorPage from './ErrorPage';
 import { Scrapper } from "../services/ArticlesScrapper";
@@ -23,8 +22,8 @@ const Home : React.FC = () => {
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <TopMenu selectedIndex={0} className="TopMenu"/>
-            <SideMenu className="SideMenu"/>
+            <TopMenu selectedIndex='home' className="TopMenu"/>
+            <SideMenu selectedIndex='home' className="SideMenu"/>
             <Feed className="Feed" items={posts}/>
         </React.Fragment>
     );

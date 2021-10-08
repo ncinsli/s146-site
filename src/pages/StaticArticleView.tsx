@@ -12,11 +12,11 @@ import './ArticleView.scss';
 
 const ArticleView : React.FC = () => {
     const history = useHistory();
-    const { id } : any = useParams();
+    const { name } : any = useParams();
     const [post, setPost] = useState<ArticleFull | undefined>();
 
     useEffect(() => {
-        Scrapper.ScrapPost(id).then((res : ArticleResponse) => {
+        Scrapper.ScrapStaticPost(name).then((res : ArticleResponse) => {
             if (!res) return;
             setPost(res.data);
         });
@@ -24,11 +24,11 @@ const ArticleView : React.FC = () => {
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <TopMenu selectedIndex='home' className="TopMenu"/>
-            <SideMenu selectedIndex='home'  className="SideMenu"/>
+            <TopMenu selectedIndex={name} className="TopMenu"/>
+            <SideMenu selectedIndex={name} className="SideMenu"/>
             <div className="ArticleAndOperations">
                 <Article className="Article" displayed={post}></Article>
-                <Button text="Назад" className="Back" onClick={() => history.push('/')}></Button>
+                <Button text="Назад" className="Back" onClick={() => history.goBack()}></Button>
             </div>
         </React.Fragment>
     );

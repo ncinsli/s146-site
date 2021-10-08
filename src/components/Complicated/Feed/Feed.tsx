@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import FeedLoading from '../../FeedLoading/FeedLoading';
 
 type Props = {
-    items : Array<ArticleFull>;
+    items : ArticlePreviewList;
     className : string;
 };
 

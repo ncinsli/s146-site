@@ -13,7 +13,7 @@ import './ArticleView.scss';
 const ArticleView : React.FC = () => {
     const history = useHistory();
     const { id } : any = useParams();
-    const [post, setPost] = useState<ArticleFull>();
+    const [post, setPost] = useState<ArticleFull | undefined>();
 
     useEffect(() => {
         Scrapper.ScrapPost(id).then((res : ArticleResponse) => {

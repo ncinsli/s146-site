@@ -22,11 +22,9 @@
   }
   &:focus{
     //color: black; свойство переназначается если ты его пишешь ещё раз
-    background-color: #153061;
     transition: 0.7s all ease;
     transform: scale(0.98);
-    color: white;
-    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
   }
   &:active{
     transition: 0.4s transform ease;
@@ -57,7 +55,7 @@
     //color: black; свойство переназначается если ты его пишешь ещё раз
     transition: 0.7s all ease;
     transform: scale(0.98);
-    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
   }
   &:active{
     transition: 0.4s transform ease;

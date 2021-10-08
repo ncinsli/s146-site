@@ -2,6 +2,7 @@ import React from 'react';
 import './Feed.scss';
 import ArticleCard from '../../Articles/ArticleCard';
 import { useHistory } from 'react-router';
+import FeedLoading from '../../FeedLoading/FeedLoading';
 
 type Props = {
     items : Array<ArticleFull>;
@@ -25,7 +26,14 @@ const Feed : React.FC<Props> = (props : Props) => {
             <div className={`Feed ${props.className}`}>
                 <h1>Последние новости</h1>
                 <div className="FeedDiv">
-                    {itemRows}
+                    {
+                        !
+                            itemRows 
+                        ?
+                            <FeedLoading/>
+                        :
+                        itemRows
+                    }
                 </div>
             </div>
         </React.Fragment>

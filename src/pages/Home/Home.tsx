@@ -1,12 +1,12 @@
 import React from "react";
 import {useEffect, useState} from "react";
-import UpperDecoration from "../components/UpperDecoration/UpperDecoration";
-import TopMenu from "../components/Complicated/TopMenu/TopMenu";
-import SideMenu from "../components/Complicated/SideMenu/SideMenu";
-import Feed from "../components/Complicated/Feed/Feed";
+import UpperDecoration from "../../components/UpperDecoration/UpperDecoration";
+import TopMenu from "../../components/Complicated/TopMenu/TopMenu";
+import SideMenu from "../../components/Complicated/SideMenu/SideMenu";
+import Feed from "../../components/Complicated/Feed/Feed";
 import './Home.scss';
-import ErrorPage from './ErrorPage';
-import { Scrapper } from "../services/ArticlesScrapper";
+import ErrorPage from '../ErrorPage';
+import { Scrapper } from "../../services/ArticlesScrapper";
 
 const Home : React.FC = () => {
     const [posts, setPosts] = useState<ArticlePreview[]>([]);
@@ -22,8 +22,8 @@ const Home : React.FC = () => {
     return (
         <React.Fragment>
             <UpperDecoration/>
-            <TopMenu selectedIndex='home' className="TopMenu"/>
-            <SideMenu selectedIndex='home' className="SideMenu"/>
+            <TopMenu selectedRoute='home' className="TopMenu"/>
+            <SideMenu selectedRoute='home' className="SideMenu"/>
             <Feed className="Feed" items={posts}/>
         </React.Fragment>
     );

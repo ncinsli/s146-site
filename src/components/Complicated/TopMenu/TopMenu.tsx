@@ -7,7 +7,7 @@ import { useHistory } from 'react-router';
 
 type Props = {
     className : string,
-    selectedIndex : string
+    selectedRoute : string
 };
 
 const TopMenu : React.FC<Props> = (props : Props) => {
@@ -18,13 +18,13 @@ const TopMenu : React.FC<Props> = (props : Props) => {
             <div className={`TopMenu ${props.className}`}>    
                 <Logo className="Logo146"></Logo>
                 <div className="TopMenuButtonsDiv">
-                    <TopButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="TopMenuButton" text="Главная"></TopButton>
-                    <TopButton focused={props.selectedIndex === 'about'} onClick={() => history.push("/about")} className="TopMenuButton" text="О школе"></TopButton>
-                    <TopButton focused={props.selectedIndex === 'contacts'} onClick={() => history.push("/contacts")} className="TopMenuButton" text="Контакты"></TopButton>
-                    <TopButton focused={props.selectedIndex === 'shum'} onClick={() => history.push("/shum")} className="TopMenuButton" text="ШЮМ"></TopButton>
-                    <TopButton focused={props.selectedIndex === 'staff'} onClick={() => history.push("/staff")} className="TopMenuButton" text="Состав"></TopButton>
-                    <TopButton focused={props.selectedIndex === 'photos'} onClick={() => history.push("/photos")} className="TopMenuButton" text="Фото"></TopButton>
-                    <TopButton focused={props.selectedIndex === 's146'} onClick={() => {window.open('http://s146.ru/'); return null;}} className="TopMenuButton" text="Офиц. сайт"></TopButton>
+                    <TopButton focused={props.selectedRoute === 'home'} onClick={() => history.push("/")} className="TopMenuButton" text="Главная"></TopButton>
+                    <TopButton focused={props.selectedRoute === 'about'} onClick={() => history.push("/about")} className="TopMenuButton" text="О школе"></TopButton>
+                    <TopButton focused={props.selectedRoute === 'contacts'} onClick={() => history.push("/contacts")} className="TopMenuButton" text="Контакты"></TopButton>
+                    <TopButton focused={props.selectedRoute === 'shum'} onClick={() => history.push("/shum")} className="TopMenuButton" text="ШЮМ"></TopButton>
+                    <TopButton focused={props.selectedRoute === 'staff'} onClick={() => history.push("/staff")} className="TopMenuButton" text="Состав"></TopButton>
+                    <TopButton focused={props.selectedRoute === 'photos'} onClick={() => history.push("/photos")} className="TopMenuButton" text="Фото"></TopButton>
+                    <TopButton focused={props.selectedRoute === 's146'} onClick={() => {window.open('http://s146.ru/'); return null;}} className="TopMenuButton" text="Офиц. сайт"></TopButton>
                 </div>
             </div>
         </React.Fragment>

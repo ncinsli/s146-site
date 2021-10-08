@@ -6,11 +6,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import ErrorPage from "./pages/ErrorPage";
 import Article from "./components/Complicated/Article/Article";
-import ArticleView from "./pages/ArticleView";
-import StaticArticleView from "./pages/StaticArticleView";
+import ArticleView from "./pages/ArticleView/ArticleView";
+import StaticArticleView from "./pages/ArticleView/StaticArticleView";
 
 
 const App : React.FC = () => {
@@ -20,7 +20,7 @@ const App : React.FC = () => {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/:name">
+                <Route exact path="/:urlRoute">
                     <StaticArticleView />
                 </Route>
                 <Route exact path="/article/:id">

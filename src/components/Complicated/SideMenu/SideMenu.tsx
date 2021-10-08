@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 
 type Props = {
     className : string,
-    selectedIndex : string
+    selectedRoute : string
 };
 
 const SideMenu : React.FC<Props> = (props : Props) => {
@@ -13,14 +13,14 @@ const SideMenu : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
             <div className={`SideMenu ${props.className}`}>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="Расписание кружков"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="Дайте, пожалуйста, задачу"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="Олимпиады"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="Клуб друзей"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="Интервью"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="Газета ШОР"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="План школы"></SideButton>
-                <SideButton focused={props.selectedIndex === 'home'} onClick={() => history.push("/")} className="SideMenuButton" text="О сайте"></SideButton>
+                <SideButton focused={props.selectedRoute === 'facultyTimetable'} onClick={() => history.push("/facultyTimetable")} className="SideMenuButton" text="Расписание кружков"></SideButton>
+                <SideButton focused={props.selectedRoute === 'giveMeTask'} onClick={() => history.push("/giveMeTask")} className="SideMenuButton" text="Дайте, пожалуйста, задачу"></SideButton>
+                <SideButton focused={props.selectedRoute === 'olimpiads'} onClick={() => history.push("/olimpiads")} className="SideMenuButton" text="Олимпиады"></SideButton>
+                <SideButton focused={props.selectedRoute === 'club146'} onClick={() => history.push("/club146")} className="SideMenuButton" text="Клуб друзей"></SideButton>
+                <SideButton focused={props.selectedRoute === 'interviews'} onClick={() => history.push("/interviews")} className="SideMenuButton" text="Интервью"></SideButton>
+                <SideButton focused={props.selectedRoute === 'schoolNewspapers'} onClick={() => history.push("/schoolNewspapers")} className="SideMenuButton" text="Газета ШОР"></SideButton>
+                <SideButton focused={props.selectedRoute === 'schoolPlan'} onClick={() => history.push("/schoolPlan")} className="SideMenuButton" text="План школы"></SideButton>
+                <SideButton focused={props.selectedRoute === 'aboutWebsite'} onClick={() => history.push("/aboutWebsite")} className="SideMenuButton" text="О сайте"></SideButton>
             </div>
         </React.Fragment>
     );

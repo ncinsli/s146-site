@@ -8,12 +8,13 @@
   border-radius: 39px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
+  
   width: 10.5vw;
   height: 12.04vh;
   // transition: background-color 0.5s ease;
-  background-color: #FCFBFB;
+  background-color: #F8F8F8;
   &:hover {
-    background-color: #FCFBFB;
+    background-color: #F8F8F8;
     color: black;
     transition: 0.2s transform ease;
     transform: scale(1.05);

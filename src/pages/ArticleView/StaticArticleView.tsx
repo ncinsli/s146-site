@@ -15,8 +15,12 @@ const StaticArticleView : React.FC = () => {
     const [post, setPost] = useState<ArticleFull | undefined>();
 
     useEffect(() => {
+        console.log("URL ROUTE", urlRoute);
         Scrapper.ScrapStaticPost(urlRoute).then((res : ArticleResponse) => {
-            if (!res) return;
+            if (!res){
+                console.log("Hi");
+                return;
+            }
             setPost(res.data);
         });
     }, []);

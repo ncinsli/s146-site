@@ -12,7 +12,6 @@ import Article from "./components/Complicated/Article/Article";
 import ArticleView from "./pages/ArticleView/ArticleView";
 import StaticArticleView from "./pages/ArticleView/StaticArticleView";
 
-
 const App : React.FC = () => {
     return(
         <Router>
@@ -20,9 +19,19 @@ const App : React.FC = () => {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/:urlRoute">
+                
+                <Route exact path="/about">
                     <StaticArticleView />
                 </Route>
+
+                <Route exact path="/contacts">
+                    <StaticArticleView />
+                </Route>
+
+                <Route exact path="/shum">
+                    <StaticArticleView />
+                </Route>
+
                 <Route exact path="/article/:id">
                     <ArticleView />
                 </Route>

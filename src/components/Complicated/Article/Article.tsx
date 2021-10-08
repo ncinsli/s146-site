@@ -11,7 +11,7 @@ const Article : React.FC<Props> = (props : Props) => {
     return (
         <React.Fragment>
             {
-                !props.displayed
+                props.displayed === undefined
                 ?
                 <div className={`Article ${props.className}`}>
                     <h1>Статья не существует</h1>

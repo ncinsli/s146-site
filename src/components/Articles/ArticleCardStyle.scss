@@ -21,7 +21,7 @@
         font-family: 'Ubuntu', sans-serif;
 
         .ArticleTitle{
-            height: 40%;
+            height: 35%;
             width: 100%;
             font-size: 36;
             overflow: hidden;
@@ -32,6 +32,7 @@
         .ArticleSubtitleAndDot{
             height: 60%;
             width: inherit;
+            
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -41,6 +42,7 @@
             word-wrap: break-word;
             overflow: hidden;
             font-size: 18;
+        
             height: inherit;
             width: inherit;
             display: block;

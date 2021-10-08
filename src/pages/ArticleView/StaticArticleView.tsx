@@ -16,18 +16,19 @@ type Props = {
 
 const StaticArticleView : React.FC<Props> = (props : Props) => {
     const history = useHistory();
+    
+    //const { urlRoute } = useParams();
     const urlRoute = props.urlRoute;
     const [post, setPost] = useState<ArticleFull | undefined>();
     console.log("ds");
 
     useEffect(() => {
-        console.log("URL ROUTE", urlRoute);
         Scrapper.ScrapStaticPost(urlRoute).then((res : ArticleResponse) => {
             console.log(res);
             if (!res) return;
             setPost(res.data);
         });
-    });
+    },[post]);
     return (
         <React.Fragment>
             <div className="ArticleAndOperations">

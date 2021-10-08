@@ -32,13 +32,13 @@ const Home : React.FC<Props> = (props : Props) => {
     }, []);
 
 
-
+    
     const itemRows: JSX.Element[] = [];
 
     props.urlRoutes.forEach(item => {
         const row = (
-            <Route exact path={`/${item.urlRoute}`}>
-              <StaticArticleView urlRoute={`/${item.urlRoute}`}/>
+          <Route exact path={`/${item.urlRoute}`}>
+              <StaticArticleView urlRoute={`${item.urlRoute}`}/>
           </Route>
         );
         itemRows.push(row);
@@ -55,9 +55,17 @@ const Home : React.FC<Props> = (props : Props) => {
 
                   <Route exact path="/"> 
                     <Feed className="Feed" items={posts}/>
-                  </Route>
-                  
+                    </Route>
+                  {/* </Route>
+                  <Route exact path="/p/:urlRoute">
+                    <StaticArticleView urlRoute={`${item.urlRoute}`} />
+                  </Route> */}
                   {
+
+
+
+
+
                     !
                         itemRows 
                     ?

@@ -17,3 +17,8 @@ declare type ArticleFull = {
     attachments : string,
     titlePicture : string
 };
+
+declare type UrlRoute = {
+  urlRoute: string
+}
+

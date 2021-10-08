@@ -17,10 +17,6 @@ import {
 } from "react-router-dom";
 import FeedLoading from "../../components/FeedLoading/FeedLoading";
 
-type UrlRoute = {
-  urlRoute: string
-}
-
 type Props = {
   urlRoutes: Array<UrlRoute>
 };

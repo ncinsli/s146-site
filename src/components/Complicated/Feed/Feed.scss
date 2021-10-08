@@ -6,6 +6,11 @@
     display: block;
     width: 66.7vw;
     h1{
+        @media (max-width: 1000px) {
+            font-size: 27px;
+            float: left;
+            margin: 0.2vh;
+        }
         font-family: Ubuntu;
         font-style: normal;
         font-weight: bold;

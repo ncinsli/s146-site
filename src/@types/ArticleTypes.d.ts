@@ -6,7 +6,7 @@ declare type ArticlePreview = {
     date : string,
     body : string,
     attachments : string,
-    sidePicture? : string
+    titlePicture? : string
 };
 
 declare type ArticleFull = {
@@ -15,5 +15,5 @@ declare type ArticleFull = {
     date : string,
     body : string,
     attachments : string,
-    sidePicture? : string
+    titlePicture : string
 };

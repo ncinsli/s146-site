@@ -3,6 +3,10 @@
 .ArticleCard{
     --ArticleCardHeight: 17.03vh;
 
+    @media (max-width: 1000px) {
+        --ArticleCardHeight: 10vh;
+    }
+
     background-color: #F7F7F7;
     border-radius: 81px;
     width: 60vw;

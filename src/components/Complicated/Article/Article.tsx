@@ -2,7 +2,7 @@ import React from 'react';
 import './Article.scss';
 
 type Props = {
-    displayed : ArticleFull | undefined,
+    displayed : ArticleFull,
     className? : string
 };
 

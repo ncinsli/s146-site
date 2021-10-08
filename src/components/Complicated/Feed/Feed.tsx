@@ -16,7 +16,7 @@ const Feed : React.FC<Props> = (props : Props) => {
     props.items.forEach(item => {
         const row = (
             <ArticleCard onClick={ () => { history.push(`/article/${item.id}`, item) } } 
-                className="Card" title={item.title} subTitle={item.body} photo="http://www.rosphoto.com/images/u/articles/1510/4_8.jpg"/>
+                className="Card" title={item.title} subTitle={item.body} photo={item.titlePicture !== undefined ? item.titlePicture : ""}/>
         );
         itemRows.push(row);
     });

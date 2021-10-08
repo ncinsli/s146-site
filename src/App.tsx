@@ -1,42 +1,32 @@
 import "./App.scss";
-import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import Home from './pages/Home/Home';
-import ErrorPage from "./pages/ErrorPage";
-import Article from "./components/Complicated/Article/Article";
-import ArticleView from "./pages/ArticleView/ArticleView";
-import StaticArticleView from "./pages/ArticleView/StaticArticleView";
+import { Scrapper } from "./services/ArticlesScrapper";
+import FeedLoading from "./components/FeedLoading/FeedLoading";
 
 const App : React.FC = () => {
+    const [urlRoutess, setUrlRoutes] = useState();
+  
+    useEffect(() => {
+      Scrapper.ScrapRoutes().then((res) => {
+        if (!res) return;
+        setUrlRoutes(res.data)
+      });
+    }, []);
+
+
     return(
-        <Router>
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
+        <React.Fragment>
+            {
+                !
+                urlRoutess
+                ?
+                    <FeedLoading/>
+                :
                 
-                <Route exact path="/about">
-                    <StaticArticleView />
-                </Route>
-
-                <Route exact path="/contacts">
-                    <StaticArticleView />
-                </Route>
-
-                <Route exact path="/shum">
-                    <StaticArticleView />
-                </Route>
-
-                <Route exact path="/article/:id">
-                    <ArticleView />
-                </Route>
-            </Switch>
-        </Router>
+            <Home urlRoutes = {urlRoutess}/>
+            }
+        </React.Fragment>
     );
 }
 //<Route exact path="/:name">

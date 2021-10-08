@@ -19,4 +19,8 @@ export class Scrapper{
     static ScrapPreviews() : Promise<any>{
         return axios.get(`https://api-ncinsli.dev.dc7342.im/posts/get/0`);
     }
+
+    static ScrapRoutes() : Promise<any>{
+        return axios.get(`https://api-ncinsli.dev.dc7342.im/static_post/get`);
+    }
 }

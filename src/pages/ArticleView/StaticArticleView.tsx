@@ -9,26 +9,27 @@ import Article from '../../components/Complicated/Article/Article';
 import Button from '../../components/Buttons/Button';
 import './ArticleView.scss';
 
-const StaticArticleView : React.FC = () => {
+
+type Props = {
+    urlRoute: string
+};
+
+const StaticArticleView : React.FC<Props> = (props : Props) => {
     const history = useHistory();
-    const { urlRoute } : any = useParams();
+    const urlRoute = props.urlRoute;
     const [post, setPost] = useState<ArticleFull | undefined>();
+    console.log("ds");
 
     useEffect(() => {
         console.log("URL ROUTE", urlRoute);
         Scrapper.ScrapStaticPost(urlRoute).then((res : ArticleResponse) => {
-            if (!res){
-                console.log("Hi");
-                return;
-            }
+            console.log(res);
+            if (!res) return;
             setPost(res.data);
         });
-    }, []);
+    });
     return (
         <React.Fragment>
-            <UpperDecoration/>
-            <TopMenu selectedRoute={urlRoute} className="TopMenu"/>
-            <SideMenu selectedRoute={urlRoute} className="SideMenu"/>
             <div className="ArticleAndOperations">
                 <Article className="Article" displayed={post}></Article>
             </div>
@@ -36,4 +37,4 @@ const StaticArticleView : React.FC = () => {
     );
 }
 
-export default withRouter(StaticArticleView);
+export default StaticArticleView;

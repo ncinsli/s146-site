@@ -12,15 +12,10 @@ export class Scrapper{
         return axios.get(`https://api-ncinsli.dev.dc7342.im/post/get/${id}`);
     }
     static ScrapStaticPost(name : string) : Promise<ArticleResponse>{
-        console.log("Asking for", name)
         return axios.get(`https://api-ncinsli.dev.dc7342.im/static_post/get/${name}`);
     }
 
     static ScrapPreviews() : Promise<any>{
         return axios.get(`https://api-ncinsli.dev.dc7342.im/posts/get/0`);
-    }
-
-    static ScrapRoutes() : Promise<any>{
-        return axios.get(`https://api-ncinsli.dev.dc7342.im/static_post/get`);
     }
 }

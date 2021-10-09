@@ -1,9 +1,6 @@
 .DecorationBackground{
     display: block;
-    
-    @media (min-width: 1001px) {
-        background-color: #193972;
-    }
+    background-color: #193972;
     width: 100%;
     height: 9.6vh;
     overflow: hidden;
@@ -14,20 +11,4 @@
         display: block;
         image-rendering: -webkit-optimize-contrast;
     }
-    
-    .decorationPC{
-        @media (max-width: 1000px) {
-            display: none;
-        }
-    }
-    
-    .decorationMobile{
-        @media (min-width: 1001px) {
-            display: none;
-        }
-        height: 10vh;
-        
-        // margin-left: 20vw;
-    }
 }
-

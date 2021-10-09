@@ -2,7 +2,7 @@ import React from 'react';
 import './Article.scss';
 
 type Props = {
-    displayed : ArticleFull | undefined,
+    displayed? : ArticleFull,
     className? : string
 };
 
@@ -11,7 +11,7 @@ const Article : React.FC<Props> = (props : Props) => {
     return (
         <React.Fragment>
             {
-                props.displayed === undefined
+                !props.displayed
                 ?
                 <div className={`Article ${props.className}`}>
                     <h1>Статья не существует</h1>

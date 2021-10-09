@@ -7,78 +7,24 @@ import Feed from "../../components/Complicated/Feed/Feed";
 import './Home.scss';
 import ErrorPage from '../ErrorPage';
 import { Scrapper } from "../../services/ArticlesScrapper";
-import StaticArticleView from "../ArticleView/StaticArticleView";
-import ArticleView from "../ArticleView/ArticleView";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import FeedLoading from "../../components/FeedLoading/FeedLoading";
 
-type Props = {
-  urlRoutes: Array<UrlRoute>
-};
-
-const Home : React.FC<Props> = (props : Props) => {
+const Home : React.FC = () => {
     const [posts, setPosts] = useState<ArticlePreview[]>([]);
   
     useEffect(() => {
       Scrapper.ScrapPreviews().then((res) => {
-        if (!res) return;
+        if (res?.data === undefined) return;
         setPosts(res.data)
       });
     }, []);
 
-
-    
-    const itemRows: JSX.Element[] = [];
-
-    props.urlRoutes.forEach(item => {
-        const row = (
-          <Route exact path={`/${item.urlRoute}`}>
-              <StaticArticleView urlRoute={`${item.urlRoute}`}/>
-          </Route>
-        );
-        itemRows.push(row);
-    });
     
     return (
         <React.Fragment>
-        <Router>
             <UpperDecoration/>
             <TopMenu selectedRoute='home' className="TopMenu"/>
             <SideMenu selectedRoute='home' className="SideMenu"/>
-            <Switch>
-
-
-                  <Route exact path="/"> 
-                    <Feed className="Feed" items={posts}/>
-                    </Route>
-                  {/* </Route>
-                  <Route exact path="/p/:urlRoute">
-                    <StaticArticleView urlRoute={`${item.urlRoute}`} />
-                  </Route> */}
-                  {
-
-
-
-
-
-                    !
-                        itemRows 
-                    ?
-                        <FeedLoading/>
-                    :
-                    itemRows
-                  }
-
-                  <Route exact path="/article/:id">
-                      <ArticleView />
-                  </Route>
-              </Switch>
-          </Router>
+            <Feed className="Feed" items={posts}/>
         </React.Fragment>
     );
 }

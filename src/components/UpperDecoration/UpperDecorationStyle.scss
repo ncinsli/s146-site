@@ -1,7 +1,7 @@
 .DecorationBackground{
     display: block;
     
-    @media (min-width: 1001px) {
+    @media (min-width: 801px) {
         background-color: #193972;
     }
     z-index: 1000;
@@ -18,14 +18,14 @@
     }
     
     .decorationPC{
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             display: none;
         }
     }
     
     .decorationMobile{
         z-index: 1000;
-        @media (min-width: 1001px) {
+        @media (min-width: 801px) {
             display: none;
         }
         box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.08);

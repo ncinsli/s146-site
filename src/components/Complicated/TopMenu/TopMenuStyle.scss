@@ -3,7 +3,7 @@
     width: auto;
     height: 6.5vh;
     overflow: visible;
-    @media (max-width: 1000px) {
+    @media (max-width: 800px) {
         padding-left: 3vw;
         margin-left: 0vw;
         // box-shadow: none;
@@ -23,13 +23,13 @@
         display: block;
         margin-right: 3vw;
         float: left;
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             display: none;
         }
     }
     .TopMenuButtonsDiv{
         // background-color: aqua;
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             display: flex;
             margin: 0;
         }
@@ -39,7 +39,7 @@
         height: inherit;
     }
     .TopMenuButton{
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             margin: 1vh;
         }
         display: inline-block;

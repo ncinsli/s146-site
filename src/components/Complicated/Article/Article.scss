@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-    
+@import 'NotionStyles.scss';
 p, h1, h2, h3, h4{
     font-family: 'Ubuntu', sans-serif;
 }
+
+
 
 .Article{
     word-break: break-word;
@@ -10,9 +12,19 @@ p, h1, h2, h3, h4{
     height: auto;
     display: block;
     width: 66.7vw;
-    @media (max-width: 1000px) {
+    // margin-top: -vh;
+    
+    @media (max-width: 800px) {
         // background-color: blue;
         margin-top: -1vh;
         width: 70vw;
+    }
+    
+    .ArticleBody{
+        margin-top: 2vh;
+
+        hr{
+            margin-top: 1vh;
+        }
     }
 }

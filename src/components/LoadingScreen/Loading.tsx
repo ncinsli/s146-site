@@ -4,11 +4,16 @@ import loadingImg from './cheldumaet.png'
 const Loading : React.FC = () => {
     return (
         <React.Fragment>
-            <img src={loadingImg} style = {{
-                height: '40vh',
-                marginTop: '60vh',
-                display: 'flex'
-            }}></img>
+            <div style = {{
+                    height: '40vh',
+                    marginTop: '60vh',
+                    display: 'flex'
+                }}>
+                <img src={loadingImg} ></img>
+                <h1>Загрузка...
+                    скорее всего, проблема с сервером
+                </h1>
+            </div>
         </React.Fragment>
     );
 };

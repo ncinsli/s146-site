@@ -34,7 +34,7 @@ const Article : React.FC<Props> = (props : Props) => {
                 <div className={`Article ${props.className}`}>
                     <h1>{props.displayed.title}</h1>
                     <h3>{props.displayed.date}</h3>
-                    <p>{props.displayed.body}</p>
+                    <p className="ArticleBody" dangerouslySetInnerHTML={{__html: props.displayed.body}}/>
                     {}
                 </div>
             }

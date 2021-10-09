@@ -7,7 +7,7 @@
     display: block;
     width: 66.7vw;
     h1{
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             font-size: 24px;
             float: left;
             margin: 0vh;
@@ -28,7 +28,7 @@
         // background-color: blueviolet;
         height: auto;
         width: inherit;
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             margin: 10vh 1vh;
         }
         display: block;

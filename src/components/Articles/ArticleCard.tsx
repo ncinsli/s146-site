@@ -20,7 +20,7 @@ const ArticleCard : React.FC<Props> = (props : Props) => {
                     <div className = "ArticleSubtitleAndDot">
                         {/* <OrangeDot/> */}
                 
-                        <p className = "ArticleSubtitle"> {props.subTitle} </p>
+                        <p className = "ArticleSubtitle" dangerouslySetInnerHTML= {{__html: props.subTitle}}/>
                     </div>
                 </div>
                 

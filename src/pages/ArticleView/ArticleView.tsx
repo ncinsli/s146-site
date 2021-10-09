@@ -20,13 +20,10 @@ const ArticleView : React.FC = () => {
             if (!res) return;
             setPost(res.data);
         });
-    }, []);
+    }, [id]);
     
     return (
         <React.Fragment>
-            <UpperDecoration/>
-            <TopMenu selectedRoute='home' className="TopMenu"/>
-            <SideMenu selectedRoute='home' className="SideMenu"/>
             <div className="ArticleAndOperations">
                 <Article className="Article" displayed={post}></Article>
             </div>

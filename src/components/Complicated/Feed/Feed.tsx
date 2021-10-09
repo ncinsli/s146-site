@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import FeedLoading from '../../FeedLoading/FeedLoading';
 
 type Props = {
-    items : Array<ArticlePreview>;
+    items : ArticlePreviewList;
     className : string;
 };
 
@@ -13,9 +13,9 @@ const Feed : React.FC<Props> = (props : Props) => {
     const itemRows: JSX.Element[] = [];
     const history = useHistory();
 
-    props.items.forEach(item => {
+    props.items.forEach((item, index) => {
         const row = (
-            <ArticleCard onClick={ () => { history.push(`/article/${item.id}`, item) } } 
+            <ArticleCard key={index} onClick={ () => { history.push(`/article/${item.id}`, item) } } 
                 className="Card" title={item.title} subTitle={item.body} photo={item.titlePicture !== undefined ? item.titlePicture : ""}/>
         );
         itemRows.push(row);

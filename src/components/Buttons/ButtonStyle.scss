@@ -16,7 +16,7 @@
   background-color: #F4F4F4;
   &:hover {
     cursor: pointer;
-    z-index: 0;
+    z-index: -5;
     transition: transform  .2s ease-out;
     transition: transform background .2s ease-out;
     background-color: #F4F4F4;
@@ -25,7 +25,7 @@
     transform: scale(1.05);
   }
   &:focus {
-    z-index: 0;
+    z-index: -5;
     color: black;
     background-color: #F4F4F4;
     transition: 0.7s background-color ease;

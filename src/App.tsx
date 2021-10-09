@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.scss";
 import Home from './pages/Home/Home';
 import { Scrapper } from "./services/ArticlesScrapper";
-import FeedLoading from "./components/FeedLoading/FeedLoading";
+import Loading from "./components/LoadingScreen/Loading";
 
 const App : React.FC = () => {
     const [urlRoutess, setUrlRoutes] = useState<UrlRoute[]>();
@@ -21,7 +21,7 @@ const App : React.FC = () => {
                 !
                     urlRoutess
                 ?
-                    <FeedLoading/>
+                    <Loading/>
                 :
                 
                 <Home urlRoutes = {urlRoutess}/>

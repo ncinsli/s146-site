@@ -11,7 +11,11 @@ const Article : React.FC<Props> = (props : Props) => {
     
     useEffect(() => {
         setTimeout(() => setTime(true), 100);
+        
     })
+    
+    // if (props.displayed?.attachments)
+    // console.log((props.displayed.attachments));
 
     return (
         <React.Fragment>
@@ -31,7 +35,7 @@ const Article : React.FC<Props> = (props : Props) => {
                     <h1>{props.displayed.title}</h1>
                     <h3>{props.displayed.date}</h3>
                     <p>{props.displayed.body}</p>
-
+                    {}
                 </div>
             }
         </React.Fragment>

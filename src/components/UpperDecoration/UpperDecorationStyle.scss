@@ -4,6 +4,8 @@
     @media (min-width: 1001px) {
         background-color: #193972;
     }
+    z-index: 1000;
+    background-color: blueviolet;
     width: 100%;
     height: 9.6vh;
     overflow: hidden;
@@ -22,9 +24,11 @@
     }
     
     .decorationMobile{
+        z-index: 1000;
         @media (min-width: 1001px) {
             display: none;
         }
+        box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.08);
         height: 10vh;
         width: 100vw;
         

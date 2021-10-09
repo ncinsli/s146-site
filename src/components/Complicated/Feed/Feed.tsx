@@ -2,7 +2,7 @@ import React from 'react';
 import './Feed.scss';
 import ArticleCard from '../../Articles/ArticleCard';
 import { useHistory } from 'react-router';
-import FeedLoading from '../../FeedLoading/FeedLoading';
+import Loading from '../../LoadingScreen/Loading';
 
 type Props = {
     items : ArticlePreviewList;
@@ -30,7 +30,7 @@ const Feed : React.FC<Props> = (props : Props) => {
                         !
                             itemRows 
                         ?
-                            <FeedLoading/>
+                            <Loading/>
                         :
                         itemRows
                     }

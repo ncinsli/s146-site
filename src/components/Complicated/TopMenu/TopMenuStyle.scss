@@ -4,6 +4,7 @@
     height: 6.5vh;
     overflow: visible;
     @media (max-width: 1000px) {
+        padding-left: 3vw;
         margin-left: 0vw;
         // box-shadow: none;
         margin-top: 0;
@@ -42,6 +43,6 @@
             margin: 1vh;
         }
         display: inline-block;
-        margin: 0 1.3vw 0 0;
+        margin: 0.5vh 1.5vw 0 0;
     }
 }

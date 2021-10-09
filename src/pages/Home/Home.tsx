@@ -15,7 +15,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import FeedLoading from "../../components/FeedLoading/FeedLoading";
+import Loading from "../../components/LoadingScreen/Loading";
 import BaseMenu from "../../components/Complicated/BaseMenu/BaseMenu";
 import Footer from "../../components/Complicated/Footer/Footer";
 
@@ -62,7 +62,7 @@ const Home : React.FC<Props> = (props : Props) => {
                     !
                         itemRows 
                     ?
-                        <FeedLoading/>
+                        <Loading/>
                     :
                     itemRows
                   }

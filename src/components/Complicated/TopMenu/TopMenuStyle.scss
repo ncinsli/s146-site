@@ -2,10 +2,11 @@
     display: block;
     width: 75vw;
     height: 6.5vh;
-    overflow: unset;
-    // background-color: antiquewhite;
+    overflow: visible;
+    background-color: antiquewhite;
     @media (max-width: 1000px) {
         margin-left: 0vw;
+        // box-shadow: none;
         margin-top: 0;
         margin-bottom: -3vh;
         width: 100vw;
@@ -30,7 +31,7 @@
         // background-color: aqua;
         overflow: visible;
         @media (max-width: 1000px) {
-            // background-color:blue;
+            background-color:blue;
             display: flex;
             margin: 1vh 2vh 0vh 2vh;
             margin-bottom: 0;
@@ -38,7 +39,7 @@
         display: block;
         float: left;
         width: auto;
-        margin-top: 7px;
+        margin-top: 7vh;
         height: inherit;
     }
     .TopMenuButton{

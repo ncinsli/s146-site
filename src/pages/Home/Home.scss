@@ -8,7 +8,9 @@
 
 .SideMenu{
     margin: 5vh 2vw 0 5vw;
-    
+    @media (max-width: 1000px) {
+        overflow: visible;
+    }
 }
 
 body{

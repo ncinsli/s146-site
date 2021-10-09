@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Article.scss';
 
 type Props = {
@@ -7,15 +7,25 @@ type Props = {
 };
 
 const Article : React.FC<Props> = (props : Props) => {
-    console.log(props.displayed)
+    const [time, setTime] = useState<boolean>(false);
+    
+    useEffect(() => {
+        setTimeout(() => setTime(true), 100);
+    })
+
     return (
         <React.Fragment>
             {
                 props.displayed === undefined
                 ?
-                <div className={`Article ${props.className}`}>
-                    <h1>Статья не существует</h1>
-                </div>
+                    <div className={`Article ${props.className}`}>
+                        {
+                            time ? 
+                                <h1>Статья не существует</h1>
+                            :
+                                <h1></h1>
+                        }
+                    </div>
                 :
                 <div className={`Article ${props.className}`}>
                     <h1>{props.displayed.title}</h1>

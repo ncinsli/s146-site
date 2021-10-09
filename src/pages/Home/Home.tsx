@@ -16,6 +16,7 @@ import {
   Link
 } from "react-router-dom";
 import FeedLoading from "../../components/FeedLoading/FeedLoading";
+import BaseMenu from "../../components/Complicated/BaseMenu/BaseMenu";
 
 type Props = {
   urlRoutes: Array<UrlRoute>
@@ -48,8 +49,7 @@ const Home : React.FC<Props> = (props : Props) => {
         <React.Fragment>
         <Router>
             <UpperDecoration/>
-            <TopMenu selectedRoute='home' className="TopMenu"/>
-            <SideMenu selectedRoute='home' className="SideMenu"/>
+            <BaseMenu />
             <Switch>
 
 

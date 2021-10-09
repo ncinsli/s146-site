@@ -19,6 +19,7 @@
   // transition: background-color 0.5s ease;
   background-color: #F8F8F8;
   &:hover {
+    cursor: pointer;
     background-color: #F8F8F8;
     color: black;
     transition: 0.2s transform ease;
@@ -29,12 +30,14 @@
     transition: 0.7s all ease;
     transform: scale(0.98);
     color: white;
-    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
   }
   &:active{
     transition: 0.4s transform ease;
     transform: scale(0.96);
   }
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.02);
+
 }
 .designedSideButtonFocued{
   display: block; 
@@ -45,6 +48,8 @@
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   width: 10.5vw;
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.05);
+
   height: 12.04vh;
   @media (max-width: 1000px) {
     width: 10vh;
@@ -62,7 +67,7 @@
   &:focus{
     transition: 0.7s all ease;
     transform: scale(0.98);
-    box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.2);
   }
   &:active{
     transition: 0.4s transform ease;

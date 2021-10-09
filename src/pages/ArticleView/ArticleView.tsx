@@ -25,7 +25,7 @@ const ArticleView : React.FC = () => {
     return (
         <React.Fragment>
             <div className="ArticleAndOperations">
-                <Article className="Article" displayed={post}></Article>
+                <Article className="View" displayed={post}></Article>
             </div>
         </React.Fragment>
     );

@@ -3,13 +3,14 @@
 .Feed{
     min-height: 68vh;
     height: auto;
+    overflow: visible;
     display: block;
     width: 66.7vw;
     h1{
         @media (max-width: 1000px) {
             font-size: 27px;
             float: left;
-            margin: 0.2vh;
+            margin: 0vh;
         }
         font-family: Ubuntu;
         font-style: normal;
@@ -17,11 +18,18 @@
         font-size: 48px;
         line-height: 55px;
         margin: 3vh;
+        :hover{
+            cursor: context-menu;
+        }
     }
     .FeedDiv{
+        overflow: visible;
+        // background-color: blueviolet;
         height: auto;
         width: inherit;
-        margin: 4vh 0;
+        @media (max-width: 1000px) {
+            margin: 10vh 1vh;
+        }
         display: block;
         .Card{
             display: block;

@@ -7,7 +7,15 @@ p, h1, h2, h3, h4{
 .Article{
     word-break: break-word;
     min-height: 68vh;
-    height: auto;
+    // height: auto;
+    height: 70vh;
+    overflow: visible;
+
     display: block;
     width: 66.7vw;
+    @media (max-width: 1000px) {
+        // background-color: blue;
+        margin-top: -1vh;
+        width: 70vw;
+    }
 }

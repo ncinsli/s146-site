@@ -16,7 +16,7 @@ const SideMenu : React.FC<Props> = (props : Props) => {
     return(
         <React.Fragment>
             <div className={`SideMenu ${props.className}`}>
-                <SideButton focused={props.selectedRoute === 'facultyTimetable'} onClick={() => {props.updateSelection(""); history.push("/facultyTimetable") }} className="SideMenuButton" text="Расписание кружков"></SideButton>
+                <SideButton focused={props.selectedRoute === 'facultyTimetable'} onClick={() => {props.updateSelection("facultyTimetable"); history.push("/facultyTimetable") }} className="SideMenuButton" text="Расписание кружков"></SideButton>
                 <SideButton focused={props.selectedRoute === 'giveMeTask'} onClick={() => {props.updateSelection("giveMeTask"); history.push("/giveMeTask")}} className="SideMenuButton" text="Дайте, пожалуйста, задачу"></SideButton>
                 <SideButton focused={props.selectedRoute === 'olimpiads'} onClick={() => {props.updateSelection("olimpiads"); history.push("/olimpiads")}} className="SideMenuButton" text="Олимпиады"></SideButton>
                 <SideButton focused={props.selectedRoute === 'club146'} onClick={() => {props.updateSelection("club146"); history.push("/club146")}} className="SideMenuButton" text="Клуб друзей"></SideButton>

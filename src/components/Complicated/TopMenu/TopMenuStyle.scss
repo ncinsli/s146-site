@@ -2,12 +2,39 @@
     display: block;
     width: 75vw;
     height: 6.5vh;
+    overflow: unset;
+    // background-color: antiquewhite;
+    @media (max-width: 1000px) {
+        margin-left: 0vw;
+        margin-top: 0;
+        margin-bottom: -3vh;
+        width: 100vw;
+        height: 12vh;
+        .TopMenu::-webkit-scrollbar{
+            display: none;
+        }
+        scrollbar-color: 0;
+        overflow-x: visible;
+        overflow-y: hidden;
+        // background-color: black;
+    }
     .Logo146{
         display: block;
         margin-right: 3vw;
         float: left;
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     .TopMenuButtonsDiv{
+        // background-color: aqua;
+        overflow: visible;
+        @media (max-width: 1000px) {
+            // background-color:blue;
+            display: flex;
+            margin: 1vh 2vh 0vh 2vh;
+            margin-bottom: 0;
+        }
         display: block;
         float: left;
         width: auto;
@@ -15,6 +42,9 @@
         height: inherit;
     }
     .TopMenuButton{
+        @media (max-width: 1000px) {
+            margin: 1vh;
+        }
         display: inline-block;
         margin: 0 1.3vw 0 0;
     }

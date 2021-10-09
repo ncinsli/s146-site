@@ -1,9 +1,8 @@
 .TopMenu{
     display: block;
-    width: 75vw;
+    width: auto;
     height: 6.5vh;
     overflow: visible;
-    background-color: antiquewhite;
     @media (max-width: 1000px) {
         margin-left: 0vw;
         // box-shadow: none;
@@ -29,17 +28,13 @@
     }
     .TopMenuButtonsDiv{
         // background-color: aqua;
-        overflow: visible;
         @media (max-width: 1000px) {
-            background-color:blue;
             display: flex;
-            margin: 1vh 2vh 0vh 2vh;
-            margin-bottom: 0;
+            margin: 0;
         }
         display: block;
         float: left;
         width: auto;
-        margin-top: 7vh;
         height: inherit;
     }
     .TopMenuButton{

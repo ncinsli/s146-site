@@ -17,6 +17,7 @@ import {
 } from "react-router-dom";
 import FeedLoading from "../../components/FeedLoading/FeedLoading";
 import BaseMenu from "../../components/Complicated/BaseMenu/BaseMenu";
+import Footer from "../../components/Complicated/Footer/Footer";
 
 type Props = {
   urlRoutes: Array<UrlRoute>
@@ -70,6 +71,7 @@ const Home : React.FC<Props> = (props : Props) => {
                       <ArticleView />
                   </Route>
               </Switch>
+              <Footer/>
           </Router>
         </React.Fragment>
     );

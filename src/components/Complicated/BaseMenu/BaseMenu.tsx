@@ -5,7 +5,6 @@ import TopMenu from '../TopMenu/TopMenu';
 
 const BaseMenu : React.FC = () => {
     const [selectedRoute, setSelectedRoute] = useState<string>("");
-
     return(
         <React.Fragment>
             <TopMenu selectedRoute={selectedRoute} updateSelection={setSelectedRoute} className="TopMenu"/>

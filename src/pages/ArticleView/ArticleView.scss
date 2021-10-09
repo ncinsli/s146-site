@@ -1,8 +1,8 @@
 
 .ArticleAndOperations{
+    display: block;
     margin-top: 5vh;
-    height: 75vh;
-    overflow-y: visible;
+    height: auto;
     float: left;
-    width: max-width;
+    width: calc(100% - 30vw);
 }

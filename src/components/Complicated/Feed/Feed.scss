@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap%27');
 
 .Feed{
-    min-height: 68vh;
+    min-height: calc(67vh - 36px);
     height: auto;
     overflow: visible;
     display: block;

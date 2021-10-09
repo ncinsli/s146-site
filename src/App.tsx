@@ -12,7 +12,7 @@ const App : React.FC = () => {
         if (!res) return;
         setUrlRoutes(res.data)
       });
-    }, []);
+    }, []); 
 
 
     return(

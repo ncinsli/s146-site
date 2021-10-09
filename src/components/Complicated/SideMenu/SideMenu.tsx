@@ -12,7 +12,10 @@ type Props = {
 const SideMenu : React.FC<Props> = (props : Props) => {
     const history = useHistory();
     const [trigger, doTrigger] = useState();
-
+    
+    console.log("sasa",window.location.pathname.split('/')[1]);
+    if(window.location.pathname.split('/')[1] != "" && window.location.pathname.split('/')[1] != "article")
+        props.updateSelection(window.location.pathname.split('/')[1]);
     return(
         <React.Fragment>
             <div className={`SideMenu ${props.className}`}>
